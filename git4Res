@@ -1,0 +1,17 @@
+ 
+	
+         
+var fileName= request.parameters["apsdb.scriptName"];
+var commitSHA = request.parameters["commitSHA"];
+
+var params = {	
+		"apsdb.scriptName": fileName,
+		"commitSHA": commitSHA
+
+};
+
+
+var result = apsdb.callApi("GitResolve", params, null);
+return result;
+
+
